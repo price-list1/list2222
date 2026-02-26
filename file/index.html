@@ -12,7 +12,6 @@
         }
 
         body {
-            
             background: #ECE7D1;
             min-height: 100vh;
             display: flex;
@@ -30,11 +29,11 @@
             padding: 20px;
         }
 
-        /* طراحی ماگ */
+        /* طراحی ماگ - بدون دسته */
         .mug {
             position: relative;
-            width: 280px;
-            height: 280px;
+            width: 320px;
+            height: 320px;
             margin: 0 auto 30px auto;
             filter: drop-shadow(0 20px 15px rgba(0,0,0,0.2));
             animation: float 3s ease-in-out infinite;
@@ -45,9 +44,6 @@
             50% { transform: translateY(-10px); }
         }
 
-        
-        }
-
         .mug-body {
             width: 100%;
             height: 100%;
@@ -55,7 +51,7 @@
             border-radius: 40% 40% 30% 30% / 30% 30% 20% 20%;
             border: 4px solid #fff5e6;
             box-shadow: 
-                0 0 0 4px #ECE7D1,  /* رنگ حاشیه متناسب با پس زمینه جدید */
+                0 0 0 4px #ECE7D1,
                 0 15px 25px rgba(0,0,0,0.2),
                 inset 0 -10px 20px rgba(0,0,0,0.1),
                 inset 0 5px 15px rgba(255,255,255,0.8);
@@ -66,14 +62,12 @@
             align-items: center;
         }
 
-        /* ================================================ */
-        /* تگ مخصوص عکس - مسیر عکس را خودتان تنظیم کنید */
-        /* ================================================ */
+        /* تگ مخصوص عکس - عکس بزرگتر شده */
         .mug-image {
-            width: 250px;           /* عرض عکس - قابل تنظیم */
-            height: 250px;          /* ارتفاع عکس - قابل تنظیم */
-            object-fit: cover;       /* نحوه نمایش عکس (cover, contain, etc) */
-            border-radius: 20px;     /* گرد کردن گوشه‌های عکس */
+            width: 280px;           /* افزایش عرض عکس */
+            height: 280px;          /* افزایش ارتفاع عکس */
+            object-fit: cover;
+            border-radius: 30%;      /* گرد کردن متناسب با ماگ */
             box-shadow: 0 5px 15px rgba(0,0,0,0.2);
             border: 3px solid white;
             z-index: 2;
@@ -81,9 +75,8 @@
         }
 
         .mug-image:hover {
-            transform: scale(1.05);  /* انیمیشن کوچک هنگام هاور */
+            transform: scale(1.05);
         }
-        /* ================================================ */
 
         .steam {
             position: absolute;
@@ -188,13 +181,13 @@
 
         @media (max-width: 480px) {
             .mug {
-                width: 220px;
-                height: 220px;
+                width: 260px;
+                height: 260px;
             }
             
             .mug-image {
-                width: 120px;
-                height: 120px;
+                width: 220px;
+                height: 220px;
             }
             
             .buttons {
@@ -212,14 +205,11 @@
 </head>
 <body>
     <div class="container">
-        <!-- ماگ -->
+        <!-- ماگ بدون دسته -->
         <div class="mug">
-            
             <div class="mug-body">
-                <!-- ================================================ -->
-                
+                <!-- عکس با سایز بزرگتر -->
                 <img src="aks.png" alt="تصویر لوگو" class="mug-image">
-                <!-- ================================================ -->
                 <div class="steam"></div>
             </div>
         </div>
